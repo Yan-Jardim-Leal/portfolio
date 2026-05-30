@@ -10,14 +10,18 @@ Um portfólio construído para ser uma experiências 3D conectado em tempo real 
 
 ## Funcionalidades
 
-- **Mundo 3D Dinâmico**: Ambientes WebGL (React Three Fiber) que reagem ao scroll e ao mouse do usuário.
-- **Scroll Inercial Amanteigado**: Implementação customizada do `Lenis` aliada ao `ScrollTrigger` do GSAP para viagens cinematográficas pela página.
-- **Painel SQL ao Vivo**: Uma rota de servidor segura (`Server Actions`) que se conecta ao seu banco de dados e traz estatísticas reais (ex: número de utilizadores do seu jogo, livros escritos, etc).
-- **100% Customizável por `.env`**: A estrutura de texto inteira do site está desacoplada. Você pode transformar este projeto num portfólio para qualquer área de engenharia apenas alterando as variáveis de ambiente.
+- **Interatividade em 3D**: Experiências simples em WebGL usando React Three Fiber que acompanham o movimento do mouse e o scroll.
+- **Navegação Fluida**: Integração de Lenis com GSAP ScrollTrigger para uma rolagem mais suave e controlada.
+- **Exibição de Dados Real-time**: Uso de Server Actions para buscar e exibir estatísticas básicas do banco de dados (como contadores ou métricas de uso).
+- **Configuração via Variáveis de Ambiente**: O conteúdo é gerenciado por um arquivo `.env`, facilitando a adaptação do projeto para diferentes temas ou nichos sem precisar mexer no código core.
 
-## 🛠️ Instalação Local
+## Instalação:
 
 1. Clone o repositório:
 ```bash
 git clone [https://github.com/seu-usuario/portfolio-rnmc.git](https://github.com/seu-usuario/portfolio-rnmc.git)
 cd portfolio-rnmc
+
+npm install
+npm run dev
+```
