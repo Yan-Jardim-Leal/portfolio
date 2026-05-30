@@ -13,7 +13,7 @@ Um portfólio construído para ser uma experiências 3D conectado em tempo real 
 - **Interatividade em 3D**: Experiências simples em WebGL usando React Three Fiber que acompanham o movimento do mouse e o scroll.
 - **Navegação Fluida**: Integração de Lenis com GSAP ScrollTrigger para uma rolagem mais suave e controlada.
 - **Exibição de Dados Real-time**: Uso de Server Actions para buscar e exibir estatísticas básicas do banco de dados (como contadores ou métricas de uso).
-- **Configuração via Variáveis de Ambiente**: O conteúdo é gerenciado por um arquivo `.env`, facilitando a adaptação do projeto para diferentes temas ou nichos sem precisar mexer no código core.
+- **Configuração via Variáveis de Ambiente**: O conteúdo é gerenciado por um arquivo `.env`, facilitando a adaptação do projeto para diferentes temas ou nichos sem precisar mexer no código core. (E não se esqueça de mudar a foto de perfil lá nos arquivos, está com a minha)
 
 ## Instalação:
 
