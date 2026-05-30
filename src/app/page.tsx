@@ -54,13 +54,13 @@ export default function Home() {
   }, [loadingDone]);
 
   return (
-    <main className="relative w-full h-[600vh] bg-[#050505]">
+    <main className="relative w-full bg-[#050505]">
       <div className="fixed inset-0 z-0 pointer-events-none">
         <Scene loadingDone={loadingDone} />
       </div>
 
-      {/* Bola */}
-      <div className="relative z-10 h-[100dvh] flex flex-col items-center justify-center pointer-events-none">
+      {/* Main */}
+      <div className="relative z-10 min-h-[100dvh] flex flex-col items-center justify-center pointer-events-none px-6">
         {!loadingDone && <LoadingScreen onComplete={() => setLoadingDone(true)} />}
         
         <div ref={textRef} className="text-center pointer-events-auto opacity-0" style={{ visibility: loadingDone ? 'visible' : 'hidden' }}>
@@ -74,7 +74,8 @@ export default function Home() {
       </div>
 
       {/* Frase legal */}
-      <div className="relative z-10 h-[100dvh] flex flex-col items-center justify-center pointer-events-none">
+      {/* ADICIONADO min-h e py-24 (espaçamento em cima e em baixo) */}
+      <div className="relative z-10 min-h-[100dvh] py-24 flex flex-col items-center justify-center pointer-events-none">
         <div className="text-center max-w-2xl px-6 text-white/80 pointer-events-auto">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#818cf8]">
             {process.env.NEXT_PUBLIC_ABYSS_TITLE || "O Abismo do Conhecimento"}
@@ -88,20 +89,20 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Olha como eu sou legal */}
-      <div className="relative z-10 h-[100dvh] flex flex-col items-center justify-center pointer-events-none px-6">
+      {/* Profile Card */}
+      <div className="relative z-10 min-h-[100dvh] py-24 flex flex-col items-center justify-center pointer-events-none px-4 sm:px-6">
         <div className="pointer-events-auto w-full flex justify-center">
           <ProfileCard />
         </div>
       </div>
 
       {/* Por favor me contrate */}
-      <div id="section-4" className="relative z-10 h-[100dvh] flex flex-col items-center justify-center pointer-events-none px-6">
-        <div className="text-center max-w-3xl bg-black/40 p-10 rounded-3xl border border-white/5 backdrop-blur-sm pointer-events-auto shadow-2xl">
+      <div id="section-4" className="relative z-10 min-h-[100dvh] py-24 flex flex-col items-center justify-center pointer-events-none px-4 sm:px-6">
+        <div className="text-center max-w-3xl bg-black/40 p-6 md:p-10 rounded-3xl border border-white/5 backdrop-blur-sm pointer-events-auto shadow-2xl">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
             {process.env.NEXT_PUBLIC_PITCH_TITLE || "Por que me contratar para o Estágio de Verão?"}
           </h2>
-          <p className="text-lg text-white/70 mb-6 leading-relaxed">
+          <p className="text-base md:text-lg text-white/70 mb-6 leading-relaxed">
             {process.env.NEXT_PUBLIC_PITCH_TEXT || "Eu construo por diversão, mas entrego com rigor..."}
           </p>
           <p className="text-white/50 text-sm italic border-l-2 border-[#818cf8] pl-4 text-left">
@@ -111,12 +112,12 @@ export default function Home() {
       </div>
 
       {/* SQL Biblioteca */}
-      <div id="section-5" className="relative z-10 h-[100dvh] flex flex-col items-center justify-center pointer-events-none px-6">
+      <div id="section-5" className="relative z-10 min-h-[100dvh] py-24 flex flex-col items-center justify-center pointer-events-none px-4 sm:px-6">
         <MetricsConsole />
       </div>
 
       {/* Contatos */}
-      <div id="section-6" className="relative z-10 h-[100dvh] flex flex-col items-center justify-center pointer-events-none px-6">
+      <div id="section-6" className="relative z-10 min-h-[100dvh] py-24 flex flex-col items-center justify-center pointer-events-none px-6">
         <div className="pointer-events-auto text-center w-full max-w-lg">
           <h2 className="text-4xl font-bold mb-2 text-[#818cf8]">
             {process.env.NEXT_PUBLIC_CONTACT_TITLE || "Iniciar Conexão"}

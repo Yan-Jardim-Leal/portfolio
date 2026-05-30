@@ -5,13 +5,12 @@ import AsciiDonut from './AsciiDonut';
 export default function ProfileCard() {
   return (
     <div className="relative p-[1px] bg-gradient-to-b from-white/20 to-white/5 rounded-3xl overflow-hidden backdrop-blur-md shadow-2xl w-full max-w-6xl">
-      <div className="bg-black/70 p-8 md:p-10 rounded-[23px] flex flex-col lg:flex-row items-center lg:items-stretch gap-10 w-full relative overflow-hidden">
+
+      <div className="bg-black/70 p-6 md:p-10 rounded-[23px] flex flex-col lg:flex-row items-center lg:items-stretch gap-6 md:gap-10 w-full relative overflow-hidden">
         
-        {/* Brilho legal na foto */}
         <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,rgba(129,140,248,0.05)_0%,transparent_50%)] pointer-events-none" />
 
-        {/* Minha linda foto */}
-        <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-2 border-[#818cf8]/40 shrink-0 shadow-[0_0_30px_rgba(129,140,248,0.15)] flex items-center justify-center bg-black/50 z-10">
+        <div className="relative w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-2 border-[#818cf8]/40 shrink-0 shadow-[0_0_30px_rgba(129,140,248,0.15)] flex items-center justify-center bg-black/50 z-10">
           <Image 
             src="/perfil.jpg" 
             alt="Yan Leal" 
@@ -25,20 +24,19 @@ export default function ProfileCard() {
           </div>
         </div>
 
-        {/* Olha para mim, sou profissional */}
         <div className="flex flex-col text-center lg:text-left flex-1 z-10 justify-center">
           <h3 className="text-3xl md:text-5xl font-bold text-white mb-3 tracking-tight drop-shadow-md">
             {process.env.NEXT_PUBLIC_PROFILE_NAME || "Yan Leal"}
           </h3>
           
-          <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-5">
-            <span className="px-3 py-1 bg-[#818cf8]/10 text-[#818cf8] text-xs font-mono rounded-md border border-[#818cf8]/20 backdrop-blur-sm">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-4 md:mb-5">
+            <span className="px-3 py-1 bg-[#818cf8]/10 text-[#818cf8] text-[10px] md:text-xs font-mono rounded-md border border-[#818cf8]/20 backdrop-blur-sm">
               {process.env.NEXT_PUBLIC_PROFILE_BADGE_1 || "Pesquisador IA"}
             </span>
-            <span className="px-3 py-1 bg-green-500/10 text-green-400 text-xs font-mono rounded-md border border-green-500/20 backdrop-blur-sm">
+            <span className="px-3 py-1 bg-green-500/10 text-green-400 text-[10px] md:text-xs font-mono rounded-md border border-green-500/20 backdrop-blur-sm">
               {process.env.NEXT_PUBLIC_PROFILE_BADGE_2 || "Engenheiro de Sistemas"}
             </span>
-            <span className="px-3 py-1 bg-white/5 text-white/60 text-xs font-mono rounded-md border border-white/10 backdrop-blur-sm">
+            <span className="px-3 py-1 bg-white/5 text-white/60 text-[10px] md:text-xs font-mono rounded-md border border-white/10 backdrop-blur-sm">
               {process.env.NEXT_PUBLIC_PROFILE_BADGE_3 || "Game Dev"}
             </span>
           </div>
@@ -58,7 +56,6 @@ export default function ProfileCard() {
           </div>
         </div>
 
-        {/* Donouts ASCII */}
         <div className="shrink-0 w-full lg:w-auto flex flex-col items-center justify-center bg-[#050505]/80 rounded-xl border border-white/5 p-6 z-10 hidden md:flex shadow-inner min-w-[280px]">
           <AsciiDonut />
         </div>
